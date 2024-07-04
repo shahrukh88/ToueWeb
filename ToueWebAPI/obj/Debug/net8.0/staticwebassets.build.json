@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "aq0QUePXgwwgERu/qDgNNuDEc5xC3TsIgc76CiCdSFo=",
+  "Source": "ToueWebAPI",
+  "BasePath": "_content/ToueWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
