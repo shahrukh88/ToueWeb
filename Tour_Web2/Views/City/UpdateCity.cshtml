@@ -1,0 +1,76 @@
+﻿@model Tour_Web.Models.Models.VM.CityUpdateVM
+
+<form asp-action="UpdateCity">
+    <br />
+    <div class="container border p-3">
+        <h1 class="text-primary">Update City</h1>
+        <hr />
+        <input hidden asp-for="CityNumber.CityNumber"/>
+        <div class="row">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="col-2">
+                <label asp-for="CityNumber.CityNumber" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+
+            <div class="col-10 pb-3">
+                <input disabled asp-for="CityNumber.CityNumber" class="form-control" />
+
+            </div>
+
+
+            <div class="col-2">
+                <label asp-for="CityNumber.CityName" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+
+            <div class="col-10 pb-3">
+                <input asp-for="CityNumber.CityName" class="form-control" />
+                <span asp-validation-for="CityNumber.CityName" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="CityNumber.CountryID" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+
+            <div class="col-10 pb-3">
+                <select asp-for="CityNumber.CountryID" class="form-select" asp-items="@Model.CountryList">
+                    <option disabled selected>--select City ---</option>
+                </select>
+                <span asp-validation-for="CityNumber.CountryID" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="CityNumber.CityDescription" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+
+            <div class="col-10 pb-3">
+                <input asp-for="CityNumber.CityDescription" class="form-control" />
+                <span asp-validation-for="CityNumber.CityDescription" class="text-danger"></span>
+            </div>
+            <div class="col-2">
+                <label asp-for="CityNumber.CityImageUrl" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+
+            <div class="col-10 pb-3">
+                <input asp-for="CityNumber.CityImageUrl" class="form-control" />
+                <input asp-for="CityNumber.CityImageUrl" hidden class="form-control" />
+                <span asp-validation-for="CityNumber.CityImageUrl" class="text-danger"></span>
+            </div>
+
+            <div class="col-5 offset-2">
+
+                <a asp-action="IndexCity" asp-controller="City" class="btn-primary btn form-control">Back To List</a>
+            </div>
+
+            <div class="col-5">
+                <input type="submit" value="Update" class="btn btn-success form-control" />
+            </div>
+
+
+
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
